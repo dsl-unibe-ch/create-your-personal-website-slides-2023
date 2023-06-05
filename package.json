@@ -1,0 +1,26 @@
+{
+  "name": "state-of-editions",
+  "version": "0.0.1",
+  "description": "slides for the course Create your personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "eloc open \"./slides.md\" --css \"./style.css\"",
+    "start": "npm run open",
+    "dev": "npm run open",
+    "build": "eloc build \"./slides.md\" --css \"./style.css\" --include \"./img/*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsl-unibe-ch/state-of-editions.git"
+  },
+  "author": "Sebastian Flick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsl-unibe-ch/state-of-editions/issues"
+  },
+  "homepage": "https://github.com/dsl-unibe-ch/state-of-editions#readme",
+  "dependencies": {
+    "eloc": "^1.3.2"
+  }
+}
