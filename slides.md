@@ -39,11 +39,15 @@ Afternoon: Getting our hands dirty
 - that is styled with css
 - and became functional through javascript
 
+We will get to know html and css (and their derivatives)
+
 ---
 
 ### What happens when I type something into my browser?
 
 [![](https://mermaid.ink/img/pako:eNp1kV9rwjAUxb_KXZ4UtHZaN5YHX6bog44xC8LoS9pc24D5syTdEPG7L7XqRFieLuf8ODnceyCF5kgocfhVoypwKlhpmcwUhPe6E6h8fzKZvq0pVN4bRweDWokco6JqmWD1A9GiFB5HcfQyjIbjOHq6C9lg7tB-o4XOLdWlsEQPEsEhgq8QFlqiYSWC3sLlM-jMZ2nfNi2d77bJ_wXe9kkrtAh7XUOpH6Dzgc5o5RB-hK9gka6WkGu-75IekWglEzzs4tDEZyRUkZgRGsacuTD1Wj1ndoGirHzjDZMk_tPnzDRiEo-S8Vn12rwzzoUqG-c5Sa6OExzvrUwdQ5XacOZxxoXXltAt2znsEVZ7vd6rglBva7xA53tdKcPUp9byAuEpY9Xe-HTq4y_1xJt-?type=png)](https://mermaid.live/edit#pako:eNp1kV9rwjAUxb_KXZ4UtHZaN5YHX6bog44xC8LoS9pc24D5syTdEPG7L7XqRFieLuf8ODnceyCF5kgocfhVoypwKlhpmcwUhPe6E6h8fzKZvq0pVN4bRweDWokco6JqmWD1A9GiFB5HcfQyjIbjOHq6C9lg7tB-o4XOLdWlsEQPEsEhgq8QFlqiYSWC3sLlM-jMZ2nfNi2d77bJ_wXe9kkrtAh7XUOpH6Dzgc5o5RB-hK9gka6WkGu-75IekWglEzzs4tDEZyRUkZgRGsacuTD1Wj1ndoGirHzjDZMk_tPnzDRiEo-S8Vn12rwzzoUqG-c5Sa6OExzvrUwdQ5XacOZxxoXXltAt2znsEVZ7vd6rglBva7xA53tdKcPUp9byAuEpY9Xe-HTq4y_1xJt-)
+
+We will configure a  DNS entry
 
 <!-- sequenceDiagram
     Client->>DNS: https://unibe.ch
@@ -53,31 +57,98 @@ Afternoon: Getting our hands dirty
     Webserver (130.92.250.6)--))Client: There you go! (Response with HTML body) -->
 
 ---
+## What is HTML
 
-## What are HTML, CSS and Javascript?
+- It's a **Markup language** (like XML)
+- There is content inside a hierarchical structure made up of tags
 
-(and whatabout sass)
+`<p class="red-paragraph">This is the content</p>`
+
+---
+## What is CSS
+
+- Cascading **Style Sheets**
+- describes how the elements in the HTML-Markup should be displayed
+
+```css
+.red-paragraph {
+   color: red;
+   border: 1px solid;
+}
+```
+<style>
+.red-paragraph {
+   color: red;
+   border: 1px solid;
+}
+
+</style>
+<p class="red-paragraph">This is the content</p>
 
 ---
 
 ## What is Markdown?
 
+- Markdown is a simple and easy to use markup language than can be compiled (translated) to html.
+
+`It's what **all of us** should write _all_ the time!`
+-->
+It's what **all of us** should write _all_ the time!
+
+[Markdown Guide](https://www.markdownguide.org/basic-syntax/)
+
+---
+
+### Bonus: What is Mermaid? 🧜‍♀️
+
+Mermaid is Markdown for diagrams and visualizations.
+
+```
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+[![](https://mermaid.ink/img/pako:eNpd0MFqwzAMBuBXMTrn0K3OVnxdx3YZlO42fFEqLTUktrGVQil99znN3MF8kr9fWEYXOARiMBAdK3EysNqxZIUUojCp7qxOYZi8MKdsvSrHwjb02YIyar15qvaCstimrbSv9NBCAyOnER2VUZe5wYIceWQLppQd5lI1i3eY3tn1R5mzR61Xf_6GcUa9Wuv2VyXEHRI538_Js9b3JDvi_5H11_KVKRIKv5KTkMB845C5AZwkfJ79AYykiWvT1mGfcKwY0X-FcL_y7YmPZYO3RV5_AKNyaTM?type=png)](https://mermaid.live/edit#pako:eNpd0MFqwzAMBuBXMTrn0K3OVnxdx3YZlO42fFEqLTUktrGVQil99znN3MF8kr9fWEYXOARiMBAdK3EysNqxZIUUojCp7qxOYZi8MKdsvSrHwjb02YIyar15qvaCstimrbSv9NBCAyOnER2VUZe5wYIceWQLppQd5lI1i3eY3tn1R5mzR61Xf_6GcUa9Wuv2VyXEHRI538_Js9b3JDvi_5H11_KVKRIKv5KTkMB845C5AZwkfJ79AYykiWvT1mGfcKwY0X-FcL_y7YmPZYO3RV5_AKNyaTM)
+
+[documentation](https://mermaid.js.org/intro/n00b-gettingStarted.html)
+
+Live Editor:
+https://mermaid.live
+
+
 ---
 
 ## What is _git_ and _GitHub_, and why should I care?
 
-    - Github CodeSpaces
+- git is the foundation of software development.
+- it keeps track of everthing than was.
+- it enables people to work at the same file at the same time and then take care of the merging later
+---
+- Github is a service owned by microsoft.
+- It provides many additional services on top of typical git-functions (like git remote servers). We will be using:
+    - Github Template Repositories
+    - Github Actions
+    - Github Codespaces
 
 ---
 
-## What is Jeckyll? (Static Site generation)
+## What is Jekyll?
+- Static site generator
+- digests Markdown (and many other file formats) and creates a functioning website out of it
+- based on ruby
+- easy set up with themes
 
 ---
 
 ## What are GithubPages (Hosting our page the easy way)
+- Free Hosting-Service of Github
 
 ---
 
+Time for a break?
+
+---
 ## Choosing a template
 
 **https://github.com/alshedivat/al-folio**
@@ -88,36 +159,35 @@ Afternoon: Getting our hands dirty
 - https://pages.github.com/themes/
 - https://academicpages.github.io/
 
-### Deploying with GitHub Pages
+---
 
-1. create new repo from template
-2. change the action-permission
-3. change the config
-4. config the ghpages-options
+## Deploying with GitHub Pages
 
-For project pages:
+1. create new repo from [template](https://github.com/alshedivat/al-folio)
 
-    In _config.yml, set url to https://<your-github-username>.github.io and baseurl to /<your-repository-name>/.
-    Set up automatic deployment of your webpage (see instructions below).
-    Make changes, commit, and push!
-    After deployment, the webpage will become available at <your-github-username>.github.io/<your-repository-name>/.
+<details><summary>2. change the action-permission</summary>
+<p>Click on Actions tab and Enable GitHub Actions</p>
+<p>Go to Settings -> Actions -> General -> Workflow permissions, and give Read and write permissions to GitHub Actions.</p>
+</details>
+<details><summary>3. change the config</summary>
+<p>In _config.yml, set url to https://&#060;your-github-username>.github.io and baseurl to /&#060;your-repository-name>/.</p></details>
+<details><summary>4. config the ghpages-options</summary>
+<p>In the Settings of your repository, in the Pages section, set the branch to gh-pages (NOT to master).</p>
+</details>
 
-To enable automatic deployment:
-
-    Click on Actions tab and Enable GitHub Actions; do not worry about creating any workflows as everything has already been set for you.
-    Go to Settings -> Actions -> General -> Workflow permissions, and give Read and write permissions to GitHub Actions
-    Make any other changes to your webpage, commit, and push. This will automatically trigger the Deploy action.
-    Wait for a few minutes and let the action complete. You can see the progress in the Actions tab. If completed successfully, in addition to the master branch, your repository should now have a newly built gh-pages branch.
-    Finally, in the Settings of your repository, in the Pages section, set the branch to gh-pages (NOT to master). For more details, see Configuring a publishing source for your GitHub Pages site.
+---
 
 ### Setting up the domain
 
-    - buying a domain
-    - creating a CNAME DNS Record
-    - adding the custom domain to GHPages
-    - changing the _config
+1. [buying a domain](www.domains.ch)
+2. creating a CNAME DNS Record
+3. adding the custom domain to GHPages
+4. changing the _config
 
-### Setting up Codespaces
+---
+  🥳 Celebrate! 🥳
+---
+## Setting up Codespaces
 
 ```
 rvm install 3.0.5
@@ -127,8 +197,7 @@ bundle update
 npm install -g @mermaid-js/mermaid-cli
 jekyll serve
 ```
-
-- https://docs.github.com/de/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+([source](https://docs.github.com/de/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll))
 
 ---
 
@@ -141,61 +210,57 @@ jekyll serve
 
 ## Create Content
 
-features of al-folio: https://github.com/alshedivat/al-folio
+[features of al-folio](https://github.com/alshedivat/al-folio#features)
 
 ---
 
 ### adding static pages
 
-just create a new page in the \_pages-folder and add the frontmatter:
+just create a new page in the _\_pages_-folder and add the frontmatter:
 
-```
----
+```YAML
 layout: page
 permalink: /static/
 title: static page
 description: Materials and stuff
 nav: true
 nav_order: 5
----
 ```
 
 ---
 
 ### adding publications
 
-upload your bib file into `_bibliography/papers.bib`
-edit the _publications_-Page
+- upload your bib file into `_bibliography/papers.bib`
+- edit the _publications_-Page
 
 ```
 {% bibliography %}
 ```
 
-if you want the bib-button for every entry: edit `\_layouts\bib.html`
-
-look for _Bib_ and delete the if-statement.
+- if you want the bib-button for every entry: edit `\_layouts\bib.html`
+--> look for _Bib_ and delete the if-statement.
 
 ---
 
 #### Special fields
 
 you can add lots of special properties to your items in the bib file:
-
 https://github.com/alshedivat/al-folio#publications
 
-to add them easily in zotero: install [betterbibtex](https://retorque.re/zotero-better-bibtex/installation/)
-
-add the fields in the extra-field:
-
+- to add them easily in zotero: install [betterbibtex](https://retorque.re/zotero-better-bibtex/installation/)
+- add the fields in the extra-field:
 `tex.field: value`
 
-source: https://retorque.re/zotero-better-bibtex/exporting/extra-fields/
+[source](https://retorque.re/zotero-better-bibtex/exporting/extra-fields/)
 
 #### Publication preview-images
 
-images to the left of the titles: Reference them in your Bib by filename. Upload the images into `assets/img/publication_preview/`
+(pictures to the left of the titles)
+- Reference them in your Bib by filename.
+- Upload the images into `assets/img/publication_preview/`
 
-or just reference an URL of the image.
+or just reference a URL of the image.
 
 ---
 
@@ -205,8 +270,8 @@ More info: https://github.com/inukshuk/jekyll-scholar
 
 ### Blogging
 
-to create a new blog post, add a file to _\_posts_.
-the filename has to obey the following syntax: _YEAR-MONTH-DAY-TITLE-WITH-SPACES_
+- to create a new blog post, add a file to _\_posts_.
+- the filename has to obey the following syntax: _YEAR-MONTH-DAY-TITLE-WITH-SPACES_
 
 Minimal frontmatter: title, layout
 
@@ -224,4 +289,11 @@ are there to divide subpages into categories - similar to posts.
 
 Most important variables in _/\_sass/\_themes.scss_
 
-## Bonus add mermaid
+---
+
+That's it for now! Happy coding!
+
+---
+
+These slides are here: https://dsl-unibe-ch.github.io/create-your-personal-website-slides-2023/
+
