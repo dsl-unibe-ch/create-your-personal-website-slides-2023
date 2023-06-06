@@ -13,23 +13,26 @@ Data Science Lab (DSL)
 
 ## Program
 
-Morning: foundations and theory
+**foundations and theory**
 
 - What is a website, technically? (Domain, DNS, Host...)
-- What are HTML, CSS and Javascript?
+- What are HTML, CSS (and Javascript)?
 - What is Markdown?
 - What is _git_ and _GitHub_, and why should I care?
-
-_Lunchbreak_
-
-Afternoon: Getting our hands dirty
-
-- What is Jeckyll? (Static Site generation)
+- What is Jekyll
 - What are GithubPages (Hosting our page the easy way)
+
+---
+
+**Getting our hands dirty**
+
 - Choosing a template
+- deploying
+- buying and setting up a domain
+- setting up GitHub Codespaces
 - Create Content
-- Edit our template
-- embedding zotero, videos, etc.
+- Style our template
+- embedding zotero, etc.
 
 ---
 
@@ -47,7 +50,7 @@ We will get to know html and css (and their derivatives)
 
 [![](https://mermaid.ink/img/pako:eNp1kV9rwjAUxb_KXZ4UtHZaN5YHX6bog44xC8LoS9pc24D5syTdEPG7L7XqRFieLuf8ODnceyCF5kgocfhVoypwKlhpmcwUhPe6E6h8fzKZvq0pVN4bRweDWokco6JqmWD1A9GiFB5HcfQyjIbjOHq6C9lg7tB-o4XOLdWlsEQPEsEhgq8QFlqiYSWC3sLlM-jMZ2nfNi2d77bJ_wXe9kkrtAh7XUOpH6Dzgc5o5RB-hK9gka6WkGu-75IekWglEzzs4tDEZyRUkZgRGsacuTD1Wj1ndoGirHzjDZMk_tPnzDRiEo-S8Vn12rwzzoUqG-c5Sa6OExzvrUwdQ5XacOZxxoXXltAt2znsEVZ7vd6rglBva7xA53tdKcPUp9byAuEpY9Xe-HTq4y_1xJt-?type=png)](https://mermaid.live/edit#pako:eNp1kV9rwjAUxb_KXZ4UtHZaN5YHX6bog44xC8LoS9pc24D5syTdEPG7L7XqRFieLuf8ODnceyCF5kgocfhVoypwKlhpmcwUhPe6E6h8fzKZvq0pVN4bRweDWokco6JqmWD1A9GiFB5HcfQyjIbjOHq6C9lg7tB-o4XOLdWlsEQPEsEhgq8QFlqiYSWC3sLlM-jMZ2nfNi2d77bJ_wXe9kkrtAh7XUOpH6Dzgc5o5RB-hK9gka6WkGu-75IekWglEzzs4tDEZyRUkZgRGsacuTD1Wj1ndoGirHzjDZMk_tPnzDRiEo-S8Vn12rwzzoUqG-c5Sa6OExzvrUwdQ5XacOZxxoXXltAt2znsEVZ7vd6rglBva7xA53tdKcPUp9byAuEpY9Xe-HTq4y_1xJt-)
 
-We will configure a  DNS entry
+We will configure a DNS entry
 
 <!-- sequenceDiagram
     Client->>DNS: https://unibe.ch
@@ -57,6 +60,7 @@ We will configure a  DNS entry
     Webserver (130.92.250.6)--))Client: There you go! (Response with HTML body) -->
 
 ---
+
 ## What is HTML
 
 - It's a **Markup language** (like XML)
@@ -65,6 +69,7 @@ We will configure a  DNS entry
 `<p class="red-paragraph">This is the content</p>`
 
 ---
+
 ## What is CSS
 
 - Cascading **Style Sheets**
@@ -72,10 +77,11 @@ We will configure a  DNS entry
 
 ```css
 .red-paragraph {
-   color: red;
-   border: 1px solid;
+  color: red;
+  border: 1px solid;
 }
 ```
+
 <style>
 .red-paragraph {
    color: red;
@@ -109,13 +115,12 @@ pie title Pets adopted by volunteers
     "Cats" : 85
     "Rats" : 15
 ```
+
 [![](https://mermaid.ink/img/pako:eNpd0MFqwzAMBuBXMTrn0K3OVnxdx3YZlO42fFEqLTUktrGVQil99znN3MF8kr9fWEYXOARiMBAdK3EysNqxZIUUojCp7qxOYZi8MKdsvSrHwjb02YIyar15qvaCstimrbSv9NBCAyOnER2VUZe5wYIceWQLppQd5lI1i3eY3tn1R5mzR61Xf_6GcUa9Wuv2VyXEHRI538_Js9b3JDvi_5H11_KVKRIKv5KTkMB845C5AZwkfJ79AYykiWvT1mGfcKwY0X-FcL_y7YmPZYO3RV5_AKNyaTM?type=png)](https://mermaid.live/edit#pako:eNpd0MFqwzAMBuBXMTrn0K3OVnxdx3YZlO42fFEqLTUktrGVQil99znN3MF8kr9fWEYXOARiMBAdK3EysNqxZIUUojCp7qxOYZi8MKdsvSrHwjb02YIyar15qvaCstimrbSv9NBCAyOnER2VUZe5wYIceWQLppQd5lI1i3eY3tn1R5mzR61Xf_6GcUa9Wuv2VyXEHRI538_Js9b3JDvi_5H11_KVKRIKv5KTkMB845C5AZwkfJ79AYykiWvT1mGfcKwY0X-FcL_y7YmPZYO3RV5_AKNyaTM)
 
-[documentation](https://mermaid.js.org/intro/n00b-gettingStarted.html)
-
+[documentation](https://mermaid.js.org/intro/n00b-gettingStarted.html) //
 Live Editor:
 https://mermaid.live
-
 
 ---
 
@@ -124,16 +129,19 @@ https://mermaid.live
 - git is the foundation of software development.
 - it keeps track of everthing than was.
 - it enables people to work at the same file at the same time and then take care of the merging later
+
 ---
+
 - Github is a service owned by microsoft.
 - It provides many additional services on top of typical git-functions (like git remote servers). We will be using:
-    - Github Template Repositories
-    - Github Actions
-    - Github Codespaces
+  - Github Template Repositories
+  - Github Actions
+  - Github Codespaces
 
 ---
 
 ## What is Jekyll?
+
 - Static site generator
 - digests Markdown (and many other file formats) and creates a functioning website out of it
 - based on ruby
@@ -142,6 +150,7 @@ https://mermaid.live
 ---
 
 ## What are GithubPages (Hosting our page the easy way)
+
 - Free Hosting-Service of Github
 
 ---
@@ -149,6 +158,7 @@ https://mermaid.live
 Time for a break?
 
 ---
+
 ## Choosing a template
 
 **https://github.com/alshedivat/al-folio**
@@ -182,11 +192,12 @@ Time for a break?
 1. [buying a domain](www.domains.ch)
 2. creating a CNAME DNS Record
 3. adding the custom domain to GHPages
-4. changing the _config
+4. changing the \_config
 
 ---
-  🥳 Celebrate! 🥳
----
+
+## 🥳 Celebrate! 🥳
+
 ## Setting up Codespaces
 
 ```
@@ -197,6 +208,7 @@ bundle update
 npm install -g @mermaid-js/mermaid-cli
 jekyll serve
 ```
+
 ([source](https://docs.github.com/de/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll))
 
 ---
@@ -239,7 +251,7 @@ nav_order: 5
 ```
 
 - if you want the bib-button for every entry: edit `\_layouts\bib.html`
---> look for _Bib_ and delete the if-statement.
+  --> look for _Bib_ and delete the if-statement.
 
 ---
 
@@ -250,13 +262,14 @@ https://github.com/alshedivat/al-folio#publications
 
 - to add them easily in zotero: install [betterbibtex](https://retorque.re/zotero-better-bibtex/installation/)
 - add the fields in the extra-field:
-`tex.field: value`
+  `tex.field: value`
 
 [source](https://retorque.re/zotero-better-bibtex/exporting/extra-fields/)
 
 #### Publication preview-images
 
 (pictures to the left of the titles)
+
 - Reference them in your Bib by filename.
 - Upload the images into `assets/img/publication_preview/`
 
@@ -297,3 +310,4 @@ That's it for now! Happy coding!
 
 These slides are here: https://dsl-unibe-ch.github.io/create-your-personal-website-slides-2023/
 
+The Repo we created is here:
