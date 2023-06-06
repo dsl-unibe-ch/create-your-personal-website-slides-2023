@@ -127,12 +127,12 @@ https://mermaid.live
 ## What is _git_ and _GitHub_, and why should I care?
 
 - git is the foundation of software development.
-- it keeps track of everthing than was.
+- it keeps track of everthing that was.
 - it enables people to work at the same file at the same time and then take care of the merging later
 
 ---
 
-- Github is a service owned by microsoft.
+- Github is a service owned by Microsoft.
 - It provides many additional services on top of typical git-functions (like git remote servers). We will be using:
   - Github Template Repositories
   - Github Actions
@@ -190,13 +190,15 @@ Time for a break?
 ### Setting up the domain
 
 1. [buying a domain](www.domains.ch)
-2. creating a CNAME DNS Record
+2. creating a CNAME DNS Record (https://username.github.io)
 3. adding the custom domain to GHPages
 4. changing the \_config
 
 ---
 
 ## 🥳 Celebrate! 🥳
+
+---
 
 ## Setting up Codespaces
 
@@ -265,7 +267,7 @@ https://github.com/alshedivat/al-folio#publications
   `tex.field: value`
 
 [source](https://retorque.re/zotero-better-bibtex/exporting/extra-fields/)
-
+---
 #### Publication preview-images
 
 (pictures to the left of the titles)
@@ -310,4 +312,4 @@ That's it for now! Happy coding!
 
 These slides are here: https://dsl-unibe-ch.github.io/create-your-personal-website-slides-2023/
 
-The Repo we created is here:
+The repo we created is here: http://dsl.flick.solutions
