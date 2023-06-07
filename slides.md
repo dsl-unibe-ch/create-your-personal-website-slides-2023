@@ -189,8 +189,8 @@ Time for a break?
 
 ### Setting up the domain
 
-1. [buying a domain](www.domains.ch)
-2. creating a CNAME DNS Record (https://username.github.io)
+1. [buying a domain](http://www.domains.ch)
+2. creating a CNAME DNS Record (username.github.io) or [A Name](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
 3. adding the custom domain to GHPages
 4. changing the \_config
 
